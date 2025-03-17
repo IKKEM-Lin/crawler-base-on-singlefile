@@ -9,7 +9,7 @@ const validators = {
       ).length > 0,
     1016: (document) =>
       (document.querySelector("div.abstract.author > div") ||
-        document.querySelector('[data-left-hand-nav="Summary"]')) &&
+        document.querySelector('[data-left-hand-nav="Summary"]')  || document.querySelector("article #author-abstract [id^=abspara]")) &&
       (document.querySelectorAll(
         "div#body > div:first-child > section[id^=s] p[id^=p]"
       ).length > 0 ||
@@ -17,7 +17,7 @@ const validators = {
           "div#body > div:first-child  :where(section[id^=aep-section] > p, section[id^=aep-section] div > p)"
         ).length > 0 ||
         document.querySelectorAll("[id^='sec'] .section-paragraph").length > 0 || 
-        document.querySelectorAll("div#body [id^='sec'] p[id^='par']").length > 0 ),
+        document.querySelectorAll("div#body [id^='sec'] p[id^='par']").length > 0  || document.querySelectorAll('article #bodymatter [id^=sec-] [role="paragraph"]').length > 0 || document.querySelectorAll("div#body section[id^='s'] [id^='p']").length > 0),
     3390: (document) =>
       document.querySelector("#html-abstract .html-p") &&
       document.querySelectorAll("article .html-body .html-p").length > 0,
