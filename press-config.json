@@ -36,7 +36,8 @@
       "[id^='sec'] .section-paragraph",
       "div#body [id^='sec'] p[id^='par']",
       "article #bodymatter [id^=sec-] [role=\"paragraph\"]",
-      "div#body section[id^='s'] [id^='p']"
+      "div#body section[id^='s'] [id^='p']",
+      "#body section[id^=aep-section] > div"
     ],
     "sel_F": ["div#body figure .captions"],
     "sel_S": ["div#body figure .captions"],
