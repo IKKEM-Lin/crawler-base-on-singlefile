@@ -2,11 +2,13 @@
   "10.1002": {
     "sel_A": [
       ".article__body .abstract-group .article-section__abstract .article-section__content",
-      "article .abstract-group"
+      "article .abstract-group",
+      "#ContentColumn h2.abstract-title + .abstract > p:first-child"
     ],
     "sel_R": "a[data-tab=\"pane-pcw-references\"]",
     "sel_P": [
-      ".article__body .article-section__full :where(.article-section__content > p, .article-section__sub-content > p)"
+      ".article__body .article-section__full :where(.article-section__content > p, .article-section__sub-content > p)",
+      "#ContentColumn :where(h2.section-title, h3.section-title, h4.section-title)~:where(p, ul)"
     ],
     "sel_F": [
       ".article__body .article-section__inline-figure .figure__caption-text"
@@ -37,7 +39,8 @@
       "div#body [id^='sec'] p[id^='par']",
       "article #bodymatter [id^=sec-] [role=\"paragraph\"]",
       "div#body section[id^='s'] [id^='p']",
-      "#body section[id^=aep-section] > div"
+      "#body section[id^=aep-section] :where(h2,h3,h4) ~ div",
+      "#body section[id^=sec] :where(h2,h3,h4) ~ div"
     ],
     "sel_F": ["div#body figure .captions"],
     "sel_S": ["div#body figure .captions"],
